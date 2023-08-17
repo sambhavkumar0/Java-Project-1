@@ -10,7 +10,9 @@ public class main1{
             case 0:
                 addTwoNumbers();
                 break;
-            case 1:break;
+            case 1:
+                mulTwoNumbers();
+                break;
             case 2:break;
             case 3:break;
             case 4:break;
@@ -34,7 +36,7 @@ public class main1{
         System.out.println("The sum is "+ (a+b));
     }
     public static void mulTwoNumbers(){
-        int x,y
+        int x,y;
         Scanner sc = new Scanner(System.in);
         x=sc.nextInt();
         y=sc.nextInt();
