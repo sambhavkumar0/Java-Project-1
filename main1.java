@@ -33,6 +33,14 @@ public class main1{
         b=sc.nextInt();
         System.out.println("The sum is "+ (a+b));
     }
+    public static void mulTwoNumbers(){
+        int x,y
+        Scanner sc = new Scanner(System.in);
+        x=sc.nextInt();
+        y=sc.nextInt();
+        int mul = x*y;
+        System.out.println("The multiplication of two integers is "+mul);
+    }
 
 }
 
