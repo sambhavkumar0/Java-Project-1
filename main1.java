@@ -13,7 +13,9 @@ public class main1{
             case 1:
                 mulTwoNumbers();
                 break;
-            case 2:break;
+            case 2: 
+                 areaOfCircle();
+            break;
             case 3:break;
             case 4:break;
             case 5:break;
@@ -43,6 +45,17 @@ public class main1{
         int mul = x*y;
         System.out.println("The multiplication of two integers is "+mul);
     }
+
+    public static void areaOfCircle() 
+    {   
+       
+      Scanner s= new Scanner(System.in);
+        
+         System.out.println("Enter the radius:");
+         double r= s.nextDouble();
+         double  area=(22*r*r)/7 ;
+         System.out.println("Area of Circle is: " + area);      
+   }
 
 }
 
