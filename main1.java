@@ -46,8 +46,13 @@ public class main1{
 			int m=3;
 			int[]nums2 ={2,5,6};
 			int n=3;
+			main1.merge(nums1,m,nums2,n);
 			break;
-            case 7:break;
+            case 7:
+			int[]nums={3,2,2,3};
+			int val=3;
+			main1.removeElement(nums,val);
+			break;
             case 8:break;
             case 9:break;
             case 10:break;
@@ -120,12 +125,22 @@ public class main1{
         int n = nums.length;
         return nums[n/2];
     }
-	public void merge(int[] nums1, int m, int[] nums2, int n) {
+	public static void merge(int[] nums1, int m, int[] nums2, int n) {
         for(int j=0,i=m;j<n;j++){
             nums1[i]=nums2[j];
             i++;
         }
         Arrays.sort(nums1);
+    }
+	public static int removeElement(int[] nums, int val) {
+        int index=0;
+       for(int i=0;i<nums.length;i++){
+           if(nums[i]!=val){
+               nums[index]=nums[i];
+               index++;
+           }
+       }
+       return index;
     }
 
 }
