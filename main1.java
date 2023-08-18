@@ -16,7 +16,23 @@ public class main1{
             case 2: 
                  areaOfCircle();
             break;
-            case 3:break;
+            case 3:
+                Scanner sc=new Scanner(System.in);
+                System.out.println("enter length of array");
+                int length=sc.nextInt();
+                int arr[]=new int[length];
+                System.out.println("enter elements of the array");
+                for(int i=0;i<=length;i++){
+                    arr[i]=sc.nextInt();
+                }
+                System.out.println("Enter the target element");
+                int target=sc.nextInt();
+                int result=linearSearchGo(arr,target);
+                if(result==-1) System.out.println("NOt found");
+                else{
+                    System.out.println("Target found at "+ result);
+                }
+                break;
             case 4:break;
             case 5:break;
             case 6:break;
