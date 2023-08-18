@@ -37,7 +37,10 @@ public class main1{
                 String s= "hello";
             main1.nonrepeating1(s);
             break;
-            case 5:break;
+            case 5:
+		int[]nums={3,3,4};
+			main1..majorityElement(nums);
+			break;
             case 6:break;
             case 7:break;
             case 8:break;
@@ -107,6 +110,11 @@ public class main1{
 			
 		}
 		}
+	public static int majorityElement(int[] nums) {
+        Arrays.sort(nums);
+        int n = nums.length;
+        return nums[n/2];
+    }
 
 }
 
