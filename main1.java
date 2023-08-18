@@ -17,7 +17,7 @@ public class main1{
                  areaOfCircle();
             break;
             case 3:
-                Scanner sc=new Scanner(System.in);
+               
                 System.out.println("enter length of array");
                 int length=sc.nextInt();
                 int arr[]=new int[length];
@@ -41,7 +41,12 @@ public class main1{
 		int[]nums={3,3,4};
 			main1..majorityElement(nums);
 			break;
-            case 6:break;
+            case 6:
+		int[]nums1={1,2,3,0,0,0};
+			int m=3;
+			int[]nums2 ={2,5,6};
+			int n=3;
+			break;
             case 7:break;
             case 8:break;
             case 9:break;
@@ -114,6 +119,13 @@ public class main1{
         Arrays.sort(nums);
         int n = nums.length;
         return nums[n/2];
+    }
+	public void merge(int[] nums1, int m, int[] nums2, int n) {
+        for(int j=0,i=m;j<n;j++){
+            nums1[i]=nums2[j];
+            i++;
+        }
+        Arrays.sort(nums1);
     }
 
 }
