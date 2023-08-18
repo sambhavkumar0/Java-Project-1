@@ -2,9 +2,9 @@ import java.util.*;
 public class main1{
 
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+       Scanner sc=new Scanner(System.in);
         int n;
-        System.out.println("Enter a number between 0 and 9");
+        System.out.println("Enter the no. of the case you want to run!");
         n=sc.nextInt();
         switch(n) {
             case 0:
@@ -33,7 +33,10 @@ public class main1{
                     System.out.println("Target found at "+ result);
                 }
                 break;
-            case 4:break;
+            case 4:
+                String s= "hello";
+            main1.nonrepeating1(s);
+            break;
             case 5:break;
             case 6:break;
             case 7:break;
@@ -43,6 +46,7 @@ public class main1{
             default: System.out.println("Invalid option choosen .Try again!"); break;
 
     }
+        sc.close();
 
 }
     public static void addTwoNumbers(){
@@ -84,6 +88,25 @@ public class main1{
         }
         return -1;
     }
+    public static void nonrepeating1(String s) {
+		
+		HashMap<Character,Integer> hm=new HashMap<>();
+		char[] ch = s.toCharArray();
+		for(int i=0;i<ch.length;i++) {
+			if(hm.containsKey(ch[i])) {
+				hm.put(ch[i], hm.get(ch[i])+1);
+			}
+			else {
+				hm.put(ch[i],1);
+			}
+		}
+		for(Character key:hm.keySet()) {
+			if(hm.get(key)==1) {
+				System.out.println(key);
+			}
+			
+		}
+		}
 
 }
 
