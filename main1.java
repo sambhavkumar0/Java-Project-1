@@ -162,7 +162,10 @@ public class main1{
             i++;
         }
         Arrays.sort(numbers1);
-        System.out.println("The merged array is: "+numbers1);
+        System.out.println("The merged array is: ");
+        for(int i=0;i<numbers1.length;i++){
+        	System.out.print(numbers1[i]+",");
+        }
     }
 
     //method 7
