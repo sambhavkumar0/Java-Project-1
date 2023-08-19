@@ -40,15 +40,28 @@ public class main1{
                     nonrepeating1(s);
                     break;
             case 5:
+               
 		        int[] nums={3,3,4};
 			    int r=majorityElement(nums);
                 System.out.println("The majority element is "+r);
 			    break;
             case 6:
-		        int[] numbers1={1,2,3,0,0,0};
-			    int m1=3;
-			    int[] numbers2 ={2,5,6};
-			     int n1=3;
+                Scanner sc6=new Scanner(System.in);
+                System.out.println("Enter the length of the first array ");
+                int m1=sc6.nextInt();
+                int numbers1[]=new int[m1];
+                System.out.println("enter the array elements ");
+		        for(int i=0; i<m1; i++){
+                    numbers1[i]=sc6.nextInt();
+                }
+                System.out.println("Enter the length of the second array ");
+			    
+			    int n1=sc6.nextInt();
+                System.out.println("enter the array elements ");
+                int numbers2[]=new int[n1];
+		        for(int i=0; i<n1; i++){
+                    numbers2[i]=sc6.nextInt();
+                }
 			     merge(numbers1,m1,numbers2,n1);
 			     break;
             case 7:
@@ -157,14 +170,21 @@ public class main1{
     
     //method 6
 	public static void merge(int[] numbers1, int m1, int[] numbers2, int n1) {
+        int[] arr3=new int[m1+n1];
+        System.out.println("length of merged array is " + arr3.length);
+         for(int i=0;i<m1;i++){
+            arr3[i]=numbers1[i];
+            
+        }
+
         for(int j=0,i=m1;j<n1;j++){
-            numbers1[i]=numbers2[j];
+              arr3[i]=numbers2[j];
             i++;
         }
-        Arrays.sort(numbers1);
+        Arrays.sort(arr3);
         System.out.println("The merged array is: ");
-        for(int i=0;i<numbers1.length;i++){
-        	System.out.print(numbers1[i]+",");
+        for(int i=0;i<arr3.length;i++){
+        	System.out.print(arr3[i]+",");
         }
     }
 
