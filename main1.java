@@ -83,6 +83,7 @@ public class main1{
         sc.close();
 
 }
+    //method 0
     public static void addTwoNumbers(){
         Scanner sc=new Scanner(System.in);
         int a,b;
@@ -91,7 +92,8 @@ public class main1{
         b=sc.nextInt();
         System.out.println("The sum is "+ (a+b));
     }
-
+   
+    //method 1
     public static void mulTwoNumbers(){
         int x,y;
         Scanner sc = new Scanner(System.in);
@@ -101,6 +103,7 @@ public class main1{
         System.out.println("The multiplication of two integers is "+mul);
     }
 
+    //method 2
     public static void areaOfCircle() 
     {   
        
@@ -112,7 +115,7 @@ public class main1{
          System.out.println("Area of Circle is: " + area); 
          s.close();     
    }    
-
+    //method 3
     public static int linearSearchGo(int arr[], int target){
         if(arr.length == 0){
             return -1;
@@ -125,7 +128,7 @@ public class main1{
         }
         return -1;
     }
-
+    //method 4
     public static void nonrepeating1(String s) {
 		
 		HashMap<Character,Integer> hm=new HashMap<>();
@@ -145,13 +148,14 @@ public class main1{
 			
 		}
 		}
-
+    //method 5
 	 public static int majorityElement(int[] nums) {
           Arrays.sort(nums);
           int n = nums.length;
           return nums[n/2];
     }
     
+    //method 6
 	public static void merge(int[] numbers1, int m1, int[] numbers2, int n1) {
         for(int j=0,i=m1;j<n1;j++){
             numbers1[i]=numbers2[j];
@@ -160,6 +164,8 @@ public class main1{
         Arrays.sort(numbers1);
         System.out.println("The merged array is: "+numbers1);
     }
+
+    //method 7
 	public static int removeElement(int[] arr2, int val) {
         int index=0;
        for(int i=0;i<arr2.length;i++){
@@ -170,6 +176,8 @@ public class main1{
        }
        return index;
     }
+
+    //method 8
 	public static int binarySearch(int arr[], int target){
         int start = 0; 
         int end =arr.length-1;
