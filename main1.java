@@ -57,14 +57,21 @@ public class main1{
 			         int result1=removeElement(arr2,val);
                      System.out.println("the number of dups found is "+result1);
 			        break;
-            case 8:     System.out.println("Enter the length of the array ");
+            case 8: 
+            Scanner sc5=new Scanner(System.in);    
+            System.out.println("Enter the length of the array ");
 			int l3=sc.nextInt();
-			
+			int arr5[]=new int[l3];
 			System.out.println("Enter the array and the target to be found");
-			int r3=binarySearch(arr, target);
+            for(int i=0;i<l3;i++){
+                arr5[i]=sc5.nextInt();
+            }
+            System.out.println("enter target");
+            int target5=sc5.nextInt();
+			int r3=binarySearch(arr5, target5);
 			if(r3==-1) System.out.println("The target is not present inside the binary tree");
 			else{
-				System.out.println("The target was present at "+r3);
+				System.out.println("The target was present at index "+r3);
 			}
 			
 			break;
