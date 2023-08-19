@@ -57,7 +57,17 @@ public class main1{
 			         int result1=removeElement(arr2,val);
                      System.out.println("the number of dups found is "+result1);
 			        break;
-            case 8:break;
+            case 8:     System.out.println("Enter the length of the array ");
+			int l3=sc.nextInt();
+			
+			System.out.println("Enter the array and the target to be found");
+			int r3=binarySearch(arr, target);
+			if(r3==-1) System.out.println("The target is not present inside the binary tree");
+			else{
+				System.out.println("The target was present at "+r3);
+			}
+			
+			break;
             case 9:break;
             case 10:break;
             default: System.out.println("Invalid option chosen .Try again!"); break;
