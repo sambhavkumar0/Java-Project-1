@@ -4,7 +4,21 @@ public class main1{
     public static void main(String[] args) {
        Scanner sc=new Scanner(System.in);
         int n;
-        System.out.println("Enter the no. of the case you want to run!");
+        System.out.println("|    Enter the no. of the case you want to run         !");
+        System.out.println(" -------------------------------------------------------");
+        System.out.println("|0 : To add two numbers                                |");
+        System.out.println("|1 : To multiply two numbers                           |");
+        System.out.println("|2 : To calculate the area of a circle                 |");
+        System.out.println("|3 : To return index of target no. using linear search |");
+        System.out.println("|4 : To find non-repeating words in string             |");
+        System.out.println("|5 : To find majority element in an array              |");
+        System.out.println("|6 : To merge two arrays into one                      |");
+        System.out.println("|7 : To remove duplicate elements in an array          |");
+        System.out.println("|8 : To find element using binary search               |");
+        System.out.println("|9 : To return index no. of the target element         |");
+        System.out.println(" -------------------------------------------------------");
+
+
         n=sc.nextInt();
         switch(n) {
             case 0:
@@ -89,8 +103,8 @@ public class main1{
 			
 			break;
             case 9:
-            Scanner sc9 = new Scanner(System.in);
-            System.out.println("Enter the length of an array: ");
+               Scanner sc9 = new Scanner(System.in);
+                System.out.println("Enter the length of an array: ");
             int l9 = sc.nextInt();
             int arr9[] = new int[l9];
             System.out.println("Enter the array");
@@ -100,7 +114,7 @@ public class main1{
             System.out.println("Enter the target element");
             int targtetelement9 = sc9.nextInt();
             int ans = orderAgnostic(arr9, targtetelement9);
-            System.out.println(ans);
+            System.out.println("The target was found at "+ans);
             break;
            
 
