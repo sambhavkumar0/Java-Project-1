@@ -218,6 +218,7 @@ public class main1{
         }
         return -1;
     }
+    //method 9
     public static int orderAgnostic(int arr[], int target){
         int start = 0;
         int end = arr.length-1;
@@ -253,6 +254,7 @@ public class main1{
          }
          return -1;
     }
+    //method 10
     public static void bubbleSort(int[] arr){
 
         for(int i=0; i<arr.length;i++){
