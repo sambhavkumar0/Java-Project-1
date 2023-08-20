@@ -138,6 +138,7 @@ public class main1{
     public static void mulTwoNumbers(){
         int x,y;
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the two numbers: ");
         x=sc.nextInt();
         y=sc.nextInt();
         int mul = x*y;
