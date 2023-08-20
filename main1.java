@@ -20,14 +20,14 @@ public class main1{
                
                 System.out.println("enter length of array");
                 int length=sc.nextInt();
-                int arr[]=new int[length];
+                int arr10[]=new int[length];
                 System.out.println("enter elements of the array");
                 for(int i=0;i<=length;i++){
-                    arr[i]=sc.nextInt();
+                    arr10[i]=sc.nextInt();
                 }
                 System.out.println("Enter the target element");
                 int target=sc.nextInt();
-                int result=linearSearchGo(arr,target);
+                int result=linearSearchGo(arr10,target);
                 if(result==-1) System.out.println("NOt found");
                 else{
                     System.out.println("Target found at "+ result);
@@ -153,12 +153,12 @@ public class main1{
          s.close();     
    }    
     //method 3
-    public static int linearSearchGo(int arr[], int target){
-        if(arr.length == 0){
+    public static int linearSearchGo(int arr10[], int target){
+        if(arr10.length == 0){
             return -1;
         }
-        for(int i=0; i<arr.length; i++){
-            int element = arr[i];
+        for(int i=0; i<arr10.length; i++){
+            int element = arr10[i];
             if(element == target){
                 return i;
             }
@@ -225,16 +225,16 @@ public class main1{
     }
 
     //method 8
-	public static int binarySearch(int arr[], int target){
+	public static int binarySearch(int arr10[], int target){
         int start = 0; 
-        int end =arr.length-1;
+        int end =arr10.length-1;
 
         while(start <= end){
             int mid =  start +(end - start)/2;
 
-            if(target < arr[mid]){
+            if(target < arr10[mid]){
                 end = mid-1;
-            }else if(target > arr[mid]){
+            }else if(target > arr10[mid]){
                 start = mid+1;
             }else{
                 return mid;
@@ -279,17 +279,17 @@ public class main1{
          return -1;
     }
     //method 10
-    public static void bubbleSort(int[] arr){
+    public static void bubbleSort(int[] arr10){
 
-        for(int i=0; i<arr.length;i++){
+        for(int i=0; i<arr10.length;i++){
             //for each step max item will come at the last respective index
-            for(int j=1; j<arr.length-i;j++){
+            for(int j=1; j<arr10.length-i;j++){
                 //swap if the item is smaller than previous
-                if(arr[j]< arr[j-1]){
+                if(arr10[j]< arr10[j-1]){
                     //swap
-                    int temp = arr[j];
-                    arr[j] = arr[j-1];
-                    arr[j-1] = temp;
+                    int temp = arr10[j];
+                    arr10[j] = arr10[j-1];
+                    arr10[j-1] = temp;
                 }
             }
         }
