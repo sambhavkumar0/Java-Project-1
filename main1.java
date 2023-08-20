@@ -88,8 +88,32 @@ public class main1{
 			}
 			
 			break;
-            case 9:break;
-            case 10:break;
+            case 9:
+            Scanner sc9 = new Scanner(System.in);
+            System.out.println("Enter the length of an array: ");
+            int l9 = sc.nextInt();
+            int arr9[] = new int[l9];
+            System.out.println("Enter the array");
+            for(int i =0;i<l9;i++){
+                arr9[i] = sc9.nextInt();
+            }
+            System.out.println("Enter the target element");
+            int targtetelement9 = sc9.nextInt();
+            int ans = orderAgnostic(arr9, targtetelement9);
+            System.out.println(ans);
+            break;
+            case 10:
+            Scanner sc10 = new Scanner(System.in);
+            System.out.println("Enter the lemght of the array: ");
+            int l10 = sc.nextInt();
+            int arr10 [] = new int [l10];
+            System.out.println("Enter the elements in the array:");
+            for(int i=0;i<l10;i++){
+                arr10[i] = sc10.nextInt();
+            }
+            bubbleSort(arr10);
+            System.out.println(Arrays.toString(arr10));
+            break;
             default: System.out.println("Invalid option chosen .Try again!"); break;
 
     }
@@ -219,13 +243,13 @@ public class main1{
         return -1;
     }
     //method 9
-    public static int orderAgnostic(int arr[], int target){
+    public static int orderAgnostic(int arr9[], int targtetelement9){
         int start = 0;
-        int end = arr.length-1;
+        int end = arr9.length-1;
         //Finding wheather Ascending or Descending
         
         boolean isAsc;
-        if(arr[start]<arr[end]){
+        if(arr9[start]<arr9[end]){
             isAsc = true;
         }else{
             isAsc = false;
@@ -234,20 +258,20 @@ public class main1{
         while(start<=end){
             int mid = start +(end-start)/2;
             
-            if(arr[mid] == target){
+            if(arr9[mid] == targtetelement9){
                 return mid;
             }
             if(isAsc){
-                if(target < arr[mid]){
+                if(targtetelement9 < arr9[mid]){
                     end = mid-1;
                 }
-                else if(target > arr[mid]){
+                else if(targtetelement9 > arr9[mid]){
                     start = start+1;
                 }
             } else{
-                if(target > arr[mid]){
+                if(targtetelement9 > arr9[mid]){
                     end = mid-1;
-                }else if(target < arr[mid]){
+                }else if(targtetelement9 < arr9[mid]){
                     start = mid+1;
                 }
             }
