@@ -102,18 +102,8 @@ public class main1{
             int ans = orderAgnostic(arr9, targtetelement9);
             System.out.println(ans);
             break;
-            case 10:
-            Scanner sc10 = new Scanner(System.in);
-            System.out.println("Enter the lemght of the array: ");
-            int l10 = sc.nextInt();
-            int arr10 [] = new int [l10];
-            System.out.println("Enter the elements in the array:");
-            for(int i=0;i<l10;i++){
-                arr10[i] = sc10.nextInt();
-            }
-            bubbleSort(arr10);
-            System.out.println(Arrays.toString(arr10));
-            break;
+           
+
             default: System.out.println("Invalid option chosen .Try again!"); break;
 
     }
@@ -277,23 +267,6 @@ public class main1{
             }
          }
          return -1;
-    }
-    //method 10
-    public static void bubbleSort(int[] arr10){
-
-        for(int i=0; i<arr10.length;i++){
-            //for each step max item will come at the last respective index
-            for(int j=1; j<arr10.length-i;j++){
-                //swap if the item is smaller than previous
-                if(arr10[j]< arr10[j-1]){
-                    //swap
-                    int temp = arr10[j];
-                    arr10[j] = arr10[j-1];
-                    arr10[j-1] = temp;
-                }
-            }
-        }
-    }
-
+    } 
 }
 
