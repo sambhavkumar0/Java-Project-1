@@ -6,7 +6,7 @@ public class main1{
         int n;
         System.out.println("|    Enter the no. of the case you want to run         !");
         System.out.println(" -------------------------------------------------------");
-        System.out.println("|0 : To add two numbers                                |");
+        System.out.println("|0 : To find the factorial of a number                 |");
         System.out.println("|1 : To multiply two numbers                           |");
         System.out.println("|2 : To calculate the area of a circle                 |");
         System.out.println("|3 : To return index of target no. using linear search |");
@@ -22,7 +22,7 @@ public class main1{
         n=sc.nextInt();
         switch(n) {
             case 0:
-                addTwoNumbers();
+                factorial();
                 break;
             case 1:
                 mulTwoNumbers();
@@ -125,13 +125,16 @@ public class main1{
 
 }
     //method 0
-    public static void addTwoNumbers(){
+    public static void factorial(){
         Scanner sc=new Scanner(System.in);
-        int a,b;
-        System.out.println("Enter two numbers");
+        int a;
+        System.out.println("Enter a number to get its factorial");
         a=sc.nextInt();
-        b=sc.nextInt();
-        System.out.println("The sum is "+ (a+b));
+	    fac=1;
+       for(int i=1;i<=a;i++){
+	       fac=fac*i;
+       }
+	    System.out.println("The factorial is "+fac);
     }
    
     //method 1
